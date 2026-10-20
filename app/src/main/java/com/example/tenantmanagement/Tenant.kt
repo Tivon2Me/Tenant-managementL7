@@ -1,11 +1,13 @@
 package com.example.tenantmanagement
 
+import java.io.Serializable
+
 data class Tenant(
     val name: String,
     val phone: String,
-    val houseNumber: String
-) {
+    val rent: String
+) : Serializable {
     fun summary(): String {
-        return "Tenant: $name, House: $houseNumber, Phone: $phone"
+        return "Tenant: $name\nPhone: $phone\nRent: KSh $rent"
     }
 }
